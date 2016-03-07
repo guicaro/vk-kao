@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import VKSdkFramework
+import Parse
 
 class FirstViewController: UIViewController {
 
@@ -22,6 +24,14 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         mottoTextBox.clearsOnInsertion = true
+        
+        
+        // Storing object (Testing becomes the collection name on mongoDB)
+        let testObj = PFObject.init(className: "Testing")
+        
+        testObj.addObject("iosblog", forKey: "websiteURL")
+        testObj.saveInBackground()
+    
     }
 
     override func didReceiveMemoryWarning() {

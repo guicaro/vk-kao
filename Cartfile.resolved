@@ -1,0 +1,3 @@
+github "BoltsFramework/Bolts-iOS" "1.6.0"
+github "VKCOM/vk-ios-sdk" "1.3.13"
+github "ParsePlatform/Parse-SDK-iOS-OSX" "1.12.0"

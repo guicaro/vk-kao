@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import VKSdkFramework
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Testing Parse
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "itishotintexas"
+            $0.clientKey = "itishotintexas"
+            $0.server = "http://parseserver-9w2e3-env.us-west-2.elasticbeanstalk.com/parse"
+        }
+        Parse.initializeWithConfiguration(configuration)
+        
         return true
     }
 

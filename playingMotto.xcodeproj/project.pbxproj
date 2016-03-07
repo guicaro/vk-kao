@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		BB1E705B1C83E4F500BC9D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1E705A1C83E4F500BC9D1D /* Assets.xcassets */; };
 		BB3B74E81C8D22330037BACB /* ConfirmMottoSentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B74E71C8D22330037BACB /* ConfirmMottoSentController.swift */; };
+		BB3B74EA1C8D2E2B0037BACB /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74E91C8D2E2B0037BACB /* VKSdkFramework.framework */; };
+		BB3B74EC1C8D2E2F0037BACB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74EB1C8D2E2F0037BACB /* Parse.framework */; };
+		BB3B74EE1C8D2E330037BACB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74ED1C8D2E330037BACB /* Bolts.framework */; };
 		BBB13CBF1C7828A10008D018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CBE1C7828A10008D018 /* AppDelegate.swift */; };
 		BBB13CC11C7828A10008D018 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CC01C7828A10008D018 /* FirstViewController.swift */; };
 		BBB13CC31C7828A10008D018 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CC21C7828A10008D018 /* SecondViewController.swift */; };
@@ -30,6 +33,10 @@
 /* Begin PBXFileReference section */
 		BB1E705A1C83E4F500BC9D1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = playingMotto/Assets.xcassets; sourceTree = "<group>"; };
 		BB3B74E71C8D22330037BACB /* ConfirmMottoSentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMottoSentController.swift; sourceTree = "<group>"; };
+		BB3B74E91C8D2E2B0037BACB /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
+		BB3B74EB1C8D2E2F0037BACB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = "<group>"; };
+		BB3B74ED1C8D2E330037BACB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
+		BB3B74F01C8D307D0037BACB /* playingMotto-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "playingMotto-Bridging-Header.h"; sourceTree = "<group>"; };
 		BBB13CBB1C7828A10008D018 /* playingMotto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playingMotto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB13CBE1C7828A10008D018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBB13CC01C7828A10008D018 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB3B74EA1C8D2E2B0037BACB /* VKSdkFramework.framework in Frameworks */,
+				BB3B74EC1C8D2E2F0037BACB /* Parse.framework in Frameworks */,
+				BB3B74EE1C8D2E330037BACB /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +73,9 @@
 		BBB13CB21C7828A10008D018 = {
 			isa = PBXGroup;
 			children = (
+				BB3B74ED1C8D2E330037BACB /* Bolts.framework */,
+				BB3B74EB1C8D2E2F0037BACB /* Parse.framework */,
+				BB3B74E91C8D2E2B0037BACB /* VKSdkFramework.framework */,
 				BBB13CBD1C7828A10008D018 /* playingMotto */,
 				BBB13CD41C7828A10008D018 /* playingMottoTests */,
 				BBB13CBC1C7828A10008D018 /* Products */,
@@ -89,6 +102,7 @@
 				BBB13CC91C7828A10008D018 /* LaunchScreen.storyboard */,
 				BBB13CCC1C7828A10008D018 /* Info.plist */,
 				BB3B74E71C8D22330037BACB /* ConfirmMottoSentController.swift */,
+				BB3B74F01C8D307D0037BACB /* playingMotto-Bridging-Header.h */,
 			);
 			path = playingMotto;
 			sourceTree = "<group>";
@@ -112,6 +126,7 @@
 				BBB13CB71C7828A10008D018 /* Sources */,
 				BBB13CB81C7828A10008D018 /* Frameworks */,
 				BBB13CB91C7828A10008D018 /* Resources */,
+				BB3B74EF1C8D2E460037BACB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -198,6 +213,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BB3B74EF1C8D2E460037BACB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/VKSdkFramework.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Parse.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Bolts.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BBB13CB71C7828A10008D018 /* Sources */ = {
@@ -334,13 +368,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = playingMotto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.playingMotto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "playingMotto/playingMotto-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -348,13 +389,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = playingMotto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.playingMotto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "playingMotto/playingMotto-Bridging-Header.h";
 			};
 			name = Release;
 		};
