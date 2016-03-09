@@ -24,6 +24,7 @@ class NewMottoViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         mottoTextBox.clearsOnInsertion = true
+
         
         
         // Storing object (Testing becomes the collection name on mongoDB)

@@ -8,7 +8,7 @@
         <!--Item-->
         <scene sceneID="6TO-5e-jCN">
             <objects>
-                <navigationController id="e0D-ii-hYp" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="e0D-ii-hYp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="iyl-uk-2hq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gS7-7t-JYD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -64,7 +64,7 @@
         <!--Item-->
         <scene sceneID="WBX-kc-FZr">
             <objects>
-                <navigationController id="7yW-o1-R6p" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="7yW-o1-R6p" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="lEm-Q2-wx8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="l9k-vA-tLu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -87,7 +87,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW" customClass="DisplayMottoViewController">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Respect people around you and be grateful to them, especially to ones that make you feel irritated." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MiM-BO-JCA">
@@ -143,7 +143,7 @@
         <!--Item-->
         <scene sceneID="Jwr-Oz-HfM">
             <objects>
-                <navigationController id="PHV-1d-70y" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="PHV-1d-70y" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="rnh-9o-fWk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="274-zO-TJA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -166,7 +166,7 @@
                         <viewControllerLayoutGuide type="bottom" id="U1k-Rz-24x"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MHd-1N-p1z">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJi-Hu-JTQ">
@@ -237,6 +237,10 @@
                                 <rect key="frame" x="-1" y="209" width="323" height="307"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcn-Ko-d6J">
+                                <rect key="frame" x="308" y="20" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -404,7 +408,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Oc3-HL-27e"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HgX-Aw-C8b">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Motto has been added to Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6i-eS-Um5">
@@ -442,7 +446,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ZMk-8S-K0L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HtR-cX-ccq">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Say thanks to author of motto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tz7-qc-1Zt">
@@ -519,7 +523,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2Qz-0J-Cpy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zdq-Ss-14D">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFj-dt-oVe">
@@ -567,7 +571,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Rhn-iE-jU2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ISS-Rr-r6L">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paz-o6-8ou">
@@ -634,6 +638,6 @@
         <image name="sendButton" width="270" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X8d-2D-AZi"/>
+        <segue reference="KHG-GH-NIA"/>
     </inferredMetricsTieBreakers>
 </document>
