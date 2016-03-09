@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  DisplayMottoViewController.swift
 //  playingMotto
 //
 //  Created by Guillermo Cabrera on 2/19/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class DisplayMottoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

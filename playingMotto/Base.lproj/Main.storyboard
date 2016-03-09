@@ -22,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="-24.5" y="-989.5"/>
         </scene>
-        <!--Write-->
+        <!--New Motto-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="Write Motto" id="9pv-A4-QxB" userLabel="Write" customClass="FirstViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="New Motto" id="9pv-A4-QxB" userLabel="New Motto" customClass="NewMottoViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -81,12 +81,12 @@
         <!--My Daily Motto-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController title="My Daily Motto" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Daily Motto" id="8rJ-Kc-sve" customClass="DisplayMottoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW" customClass="DisplayMottoViewController">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="555.5" y="1690.5"/>
         </scene>
-        <!--Profile-->
+        <!--My Mottos-->
         <scene sceneID="BBx-4u-I2v">
             <objects>
-                <viewController title="Profile" id="wqB-MC-cBB" sceneMemberID="viewController">
+                <viewController title="My Mottos" id="wqB-MC-cBB" customClass="MyMottosViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zwv-5v-9Y9"/>
                         <viewControllerLayoutGuide type="bottom" id="U1k-Rz-24x"/>
@@ -248,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="1367.5" y="1770.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Landing View Controller-->
         <scene sceneID="YJy-8l-EGm">
             <objects>
-                <viewController id="nJ2-TI-Rzd" sceneMemberID="viewController">
+                <viewController id="nJ2-TI-Rzd" customClass="LandingViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aJh-9L-Kdy"/>
                         <viewControllerLayoutGuide type="bottom" id="aBJ-do-15d"/>
@@ -300,10 +300,10 @@
             </objects>
             <point key="canvasLocation" x="-1212.5" y="196.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="t13-TO-LB3">
             <objects>
-                <viewController id="sWf-W4-j5q" sceneMemberID="viewController">
+                <viewController id="sWf-W4-j5q" customClass="LoginViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vux-gi-f7S"/>
                         <viewControllerLayoutGuide type="bottom" id="beq-iE-SkP"/>
@@ -356,15 +356,15 @@
             </objects>
             <point key="canvasLocation" x="-602.5" y="713.5"/>
         </scene>
-        <!--Write-->
+        <!--Confirm Send Motto-->
         <scene sceneID="q7R-xZ-iDf">
             <objects>
-                <viewController title="Confirm sent motto" id="T1h-Op-C3f" userLabel="Write" customClass="ConfirmMottoSentController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Confirm Send Motto" id="T1h-Op-C3f" customClass="ConfirmMottoSentController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rSe-qe-JDv"/>
                         <viewControllerLayoutGuide type="bottom" id="GDd-6x-L75"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UKR-Hm-E1c" customClass="Con">
+                    <view key="view" contentMode="scaleToFill" id="UKR-Hm-E1c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -395,10 +395,10 @@
             </objects>
             <point key="canvasLocation" x="1400.5" y="-1362.5"/>
         </scene>
-        <!--My Daily Motto-->
+        <!--Confirm Added Favorites-->
         <scene sceneID="3Xp-3A-xuZ">
             <objects>
-                <viewController title="My Daily Motto" id="vmM-qQ-EmZ" customClass="SecondViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Confirm Added Favorites" id="vmM-qQ-EmZ" customClass="ConfirmFavoritesAddedViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9TS-eF-tvR"/>
                         <viewControllerLayoutGuide type="bottom" id="Oc3-HL-27e"/>
@@ -433,10 +433,10 @@
             </objects>
             <point key="canvasLocation" x="2404.5" y="245.5"/>
         </scene>
-        <!--Write Thanks-->
+        <!--Confirm Thanks Sent-->
         <scene sceneID="bgU-7H-6U5">
             <objects>
-                <viewController title="Write Thanks" id="X2C-t3-8Sy" customClass="SecondViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Confirm Thanks Sent" id="X2C-t3-8Sy" customClass="NewThanksViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AVi-ok-oY7"/>
                         <viewControllerLayoutGuide type="bottom" id="ZMk-8S-K0L"/>
@@ -476,7 +476,7 @@
         <!--My Daily Motto-->
         <scene sceneID="wdN-RQ-geV">
             <objects>
-                <viewController title="My Daily Motto" id="WYM-FF-T2o" customClass="SecondViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Daily Motto" id="WYM-FF-T2o" customClass="ConfirmThankSentViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DXm-Oz-PyT"/>
                         <viewControllerLayoutGuide type="bottom" id="KTX-ZN-OSf"/>
@@ -510,10 +510,10 @@
             </objects>
             <point key="canvasLocation" x="3100.5" y="1036.5"/>
         </scene>
-        <!--Profile Anya-->
+        <!--Profile -->
         <scene sceneID="11Y-RK-DRj">
             <objects>
-                <viewController title="Profile Anya" id="RLP-zr-0BB" customClass="SecondViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile " id="RLP-zr-0BB" customClass="ProfileViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JF7-7d-uWX"/>
                         <viewControllerLayoutGuide type="bottom" id="2Qz-0J-Cpy"/>
@@ -558,10 +558,10 @@
             </objects>
             <point key="canvasLocation" x="2404.5" y="-619.5"/>
         </scene>
-        <!--Profile-->
+        <!--Edit Profile-->
         <scene sceneID="aQR-gi-2Ze">
             <objects>
-                <viewController title="Profile" id="qLJ-kd-1Ph" sceneMemberID="viewController">
+                <viewController title="Edit Profile" id="qLJ-kd-1Ph" customClass="EditProfileViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cKp-uB-UHc"/>
                         <viewControllerLayoutGuide type="bottom" id="Rhn-iE-jU2"/>
@@ -634,6 +634,6 @@
         <image name="sendButton" width="270" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KHG-GH-NIA"/>
+        <segue reference="X8d-2D-AZi"/>
     </inferredMetricsTieBreakers>
 </document>

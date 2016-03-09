@@ -13,11 +13,19 @@
 		BB3B74EC1C8D2E2F0037BACB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74EB1C8D2E2F0037BACB /* Parse.framework */; };
 		BB3B74EE1C8D2E330037BACB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74ED1C8D2E330037BACB /* Bolts.framework */; };
 		BBB13CBF1C7828A10008D018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CBE1C7828A10008D018 /* AppDelegate.swift */; };
-		BBB13CC11C7828A10008D018 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CC01C7828A10008D018 /* FirstViewController.swift */; };
-		BBB13CC31C7828A10008D018 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CC21C7828A10008D018 /* SecondViewController.swift */; };
+		BBB13CC11C7828A10008D018 /* NewMottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CC01C7828A10008D018 /* NewMottoViewController.swift */; };
+		BBB13CC31C7828A10008D018 /* DisplayMottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CC21C7828A10008D018 /* DisplayMottoViewController.swift */; };
 		BBB13CC61C7828A10008D018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB13CC41C7828A10008D018 /* Main.storyboard */; };
 		BBB13CCB1C7828A10008D018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB13CC91C7828A10008D018 /* LaunchScreen.storyboard */; };
 		BBB13CD61C7828A10008D018 /* playingMottoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CD51C7828A10008D018 /* playingMottoTests.swift */; };
+		BBDFB9A11C8FE00E0043F405 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9A01C8FE00E0043F405 /* LandingViewController.swift */; };
+		BBDFB9A51C8FE10A0043F405 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9A41C8FE10A0043F405 /* LoginViewController.swift */; };
+		BBDFB9A71C8FEAB30043F405 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9A61C8FEAB30043F405 /* ProfileViewController.swift */; };
+		BBDFB9A91C8FEAFB0043F405 /* ConfirmFavoritesAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9A81C8FEAFB0043F405 /* ConfirmFavoritesAddedViewController.swift */; };
+		BBDFB9AB1C8FEC9A0043F405 /* ConfirmThanksSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9AA1C8FEC9A0043F405 /* ConfirmThanksSentViewController.swift */; };
+		BBDFB9AD1C8FECE60043F405 /* NewThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9AC1C8FECE60043F405 /* NewThanksViewController.swift */; };
+		BBDFB9AF1C8FEDCC0043F405 /* MyMottosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9AE1C8FEDCC0043F405 /* MyMottosViewController.swift */; };
+		BBDFB9B11C8FEE1A0043F405 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9B01C8FEE1A0043F405 /* EditProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,14 +47,22 @@
 		BB3B74F01C8D307D0037BACB /* playingMotto-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "playingMotto-Bridging-Header.h"; sourceTree = "<group>"; };
 		BBB13CBB1C7828A10008D018 /* playingMotto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playingMotto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB13CBE1C7828A10008D018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BBB13CC01C7828A10008D018 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		BBB13CC21C7828A10008D018 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BBB13CC01C7828A10008D018 /* NewMottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMottoViewController.swift; sourceTree = "<group>"; };
+		BBB13CC21C7828A10008D018 /* DisplayMottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMottoViewController.swift; sourceTree = "<group>"; };
 		BBB13CC51C7828A10008D018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BBB13CCA1C7828A10008D018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBB13CCC1C7828A10008D018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBB13CD11C7828A10008D018 /* playingMottoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = playingMottoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB13CD51C7828A10008D018 /* playingMottoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playingMottoTests.swift; sourceTree = "<group>"; };
 		BBB13CD71C7828A10008D018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBDFB9A01C8FE00E0043F405 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		BBDFB9A41C8FE10A0043F405 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BBDFB9A61C8FEAB30043F405 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BBDFB9A81C8FEAFB0043F405 /* ConfirmFavoritesAddedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmFavoritesAddedViewController.swift; sourceTree = "<group>"; };
+		BBDFB9AA1C8FEC9A0043F405 /* ConfirmThanksSentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmThanksSentViewController.swift; sourceTree = "<group>"; };
+		BBDFB9AC1C8FECE60043F405 /* NewThanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewThanksViewController.swift; sourceTree = "<group>"; };
+		BBDFB9AE1C8FEDCC0043F405 /* MyMottosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMottosViewController.swift; sourceTree = "<group>"; };
+		BBDFB9B01C8FEE1A0043F405 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,13 +112,21 @@
 			isa = PBXGroup;
 			children = (
 				BBB13CBE1C7828A10008D018 /* AppDelegate.swift */,
-				BBB13CC01C7828A10008D018 /* FirstViewController.swift */,
-				BBB13CC21C7828A10008D018 /* SecondViewController.swift */,
+				BBB13CC01C7828A10008D018 /* NewMottoViewController.swift */,
+				BBB13CC21C7828A10008D018 /* DisplayMottoViewController.swift */,
 				BBB13CC41C7828A10008D018 /* Main.storyboard */,
 				BBB13CC91C7828A10008D018 /* LaunchScreen.storyboard */,
 				BBB13CCC1C7828A10008D018 /* Info.plist */,
 				BB3B74E71C8D22330037BACB /* ConfirmMottoSentController.swift */,
 				BB3B74F01C8D307D0037BACB /* playingMotto-Bridging-Header.h */,
+				BBDFB9A01C8FE00E0043F405 /* LandingViewController.swift */,
+				BBDFB9A41C8FE10A0043F405 /* LoginViewController.swift */,
+				BBDFB9A61C8FEAB30043F405 /* ProfileViewController.swift */,
+				BBDFB9A81C8FEAFB0043F405 /* ConfirmFavoritesAddedViewController.swift */,
+				BBDFB9AA1C8FEC9A0043F405 /* ConfirmThanksSentViewController.swift */,
+				BBDFB9AC1C8FECE60043F405 /* NewThanksViewController.swift */,
+				BBDFB9AE1C8FEDCC0043F405 /* MyMottosViewController.swift */,
+				BBDFB9B01C8FEE1A0043F405 /* EditProfileViewController.swift */,
 			);
 			path = playingMotto;
 			sourceTree = "<group>";
@@ -238,10 +262,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDFB9AD1C8FECE60043F405 /* NewThanksViewController.swift in Sources */,
+				BBDFB9A51C8FE10A0043F405 /* LoginViewController.swift in Sources */,
 				BB3B74E81C8D22330037BACB /* ConfirmMottoSentController.swift in Sources */,
-				BBB13CC31C7828A10008D018 /* SecondViewController.swift in Sources */,
+				BBB13CC31C7828A10008D018 /* DisplayMottoViewController.swift in Sources */,
 				BBB13CBF1C7828A10008D018 /* AppDelegate.swift in Sources */,
-				BBB13CC11C7828A10008D018 /* FirstViewController.swift in Sources */,
+				BBDFB9A71C8FEAB30043F405 /* ProfileViewController.swift in Sources */,
+				BBDFB9A91C8FEAFB0043F405 /* ConfirmFavoritesAddedViewController.swift in Sources */,
+				BBDFB9AB1C8FEC9A0043F405 /* ConfirmThanksSentViewController.swift in Sources */,
+				BBDFB9B11C8FEE1A0043F405 /* EditProfileViewController.swift in Sources */,
+				BBDFB9A11C8FE00E0043F405 /* LandingViewController.swift in Sources */,
+				BBB13CC11C7828A10008D018 /* NewMottoViewController.swift in Sources */,
+				BBDFB9AF1C8FEDCC0043F405 /* MyMottosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

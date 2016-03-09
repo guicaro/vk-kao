@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  NewMottoViewController.swift
 //  playingMotto
 //
 //  Created by Guillermo Cabrera on 2/19/16.
@@ -10,7 +10,7 @@ import UIKit
 import VKSdkFramework
 import Parse
 
-class FirstViewController: UIViewController {
+class NewMottoViewController: UIViewController {
 
     @IBOutlet weak var mottoTextBox: UITextView!
     @IBOutlet weak var sendButton: UIButton!

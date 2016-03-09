@@ -1,18 +1,17 @@
 //
-//  SecondViewController.swift
+//  ConfirmThanksSentViewController.swift
 //  playingMotto
 //
-//  Created by Guillermo Cabrera on 2/19/16.
+//  Created by Guillermo Cabrera on 3/8/16.
 //  Copyright © 2016 Guillermo Cabrera. All rights reserved.
 //
 
 import UIKit
 
-class ConfirmMottoSentController: UIViewController {
+class ConfirmThankSentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("In Confirm Motto Sent")
         // Do any additional setup after loading the view, typically from a nib.
     }
     
