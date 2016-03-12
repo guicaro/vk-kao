@@ -11,28 +11,15 @@ import VKSdkFramework
 import Parse
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, VKSdkDelegate {
 
     var window: UIWindow?
-
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        // Testing Parse
-        let configuration = ParseClientConfiguration {
-            $0.applicationId = "itishotintexas"
-            $0.clientKey = "itishotintexas"
-            $0.server = "http://parseserver-9w2e3-env.us-west-2.elasticbeanstalk.com/parse"
-        }
-        Parse.initializeWithConfiguration(configuration)
-        
-        return true
-    }
+   // var sdkInstance = VKSdk.initializeWithAppId("5278492")
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -51,7 +38,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // Override point for customization after application launch.
+        
+        // Initialize Parse
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "itishotintexas"
+            $0.clientKey = "itishotintexas"
+            $0.server = "http://parseserver-9w2e3-env.us-west-2.elasticbeanstalk.com/parse"
+        }
+        Parse.initializeWithConfiguration(configuration)
+        
+        VKSdk.initializeWithAppId("5278492")
+        // Seems we also need to register the delegate
+        
+        return true
+    }
+    
+    // MARK: VK stuff here
+    
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        
+        print("Inside VK application")
+        VKSdk.processOpenURL(url, fromApplication: options[UIApplicationOpenURLOptionsSourceApplicationKey]! as! String)
+        return true
+    }
+    
+    /**
+     Notifies delegate about authorization was completed, and returns authorization result which presents new token or error.
+     @param result contains new token or error, retrieved after VK authorization
+     */
+    func vkSdkAccessAuthorizationFinishedWithResult(result: VKAuthorizationResult!) {
+        print("Inside vksdkAccessAuthorizationFinishedWithResult")
+        let token = result.token
+        let vkUser = result.user
+        print("\(token) \(vkUser)")
+        //TODO: Maybe create PFUSER here on parse server????
+        
+    }
+    
+    /**
+     Notifies delegate about access error, mostly connected with user deauthorized application
+     */
+    func vkSdkUserAuthorizationFailed() {
+        print("Inside vksdkuserauthorizationfailed")
+        
+    }
+    
 
 }
 

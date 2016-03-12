@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB1E705B1C83E4F500BC9D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1E705A1C83E4F500BC9D1D /* Assets.xcassets */; };
+		BB1EC7411C929192002385EA /* LoginVKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EC7401C929192002385EA /* LoginVKViewController.swift */; };
 		BB3B74E81C8D22330037BACB /* ConfirmMottoSentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B74E71C8D22330037BACB /* ConfirmMottoSentController.swift */; };
 		BB3B74EA1C8D2E2B0037BACB /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74E91C8D2E2B0037BACB /* VKSdkFramework.framework */; };
 		BB3B74EC1C8D2E2F0037BACB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74EB1C8D2E2F0037BACB /* Parse.framework */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		BB1E705A1C83E4F500BC9D1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = playingMotto/Assets.xcassets; sourceTree = "<group>"; };
+		BB1EC7401C929192002385EA /* LoginVKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVKViewController.swift; sourceTree = "<group>"; };
 		BB3B74E71C8D22330037BACB /* ConfirmMottoSentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMottoSentController.swift; sourceTree = "<group>"; };
 		BB3B74E91C8D2E2B0037BACB /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
 		BB3B74EB1C8D2E2F0037BACB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				BBDFB9AC1C8FECE60043F405 /* NewThanksViewController.swift */,
 				BBDFB9AE1C8FEDCC0043F405 /* MyMottosViewController.swift */,
 				BBDFB9B01C8FEE1A0043F405 /* EditProfileViewController.swift */,
+				BB1EC7401C929192002385EA /* LoginVKViewController.swift */,
 			);
 			path = playingMotto;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBDFB9AD1C8FECE60043F405 /* NewThanksViewController.swift in Sources */,
+				BB1EC7411C929192002385EA /* LoginVKViewController.swift in Sources */,
 				BBDFB9A51C8FE10A0043F405 /* LoginViewController.swift in Sources */,
 				BB3B74E81C8D22330037BACB /* ConfirmMottoSentController.swift in Sources */,
 				BBB13CC31C7828A10008D018 /* DisplayMottoViewController.swift in Sources */,

@@ -283,7 +283,7 @@
                                 <rect key="frame" x="96" y="377" width="124" height="30"/>
                                 <state key="normal" title="Next, log in (Auto)"/>
                                 <connections>
-                                    <segue destination="sWf-W4-j5q" kind="show" id="qDy-z2-V7R"/>
+                                    <segue destination="gBX-Kx-hs1" kind="show" id="aEm-bX-gta"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBd-bR-Isy">
@@ -302,7 +302,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nag-mi-uWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1212.5" y="196.5"/>
+            <point key="canvasLocation" x="-2486.5" y="216.5"/>
+        </scene>
+        <!--LoginVK View Controller-->
+        <scene sceneID="Ben-6L-Ptq">
+            <objects>
+                <viewController id="gBX-Kx-hs1" customClass="LoginVKViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hTD-oQ-nn2"/>
+                        <viewControllerLayoutGuide type="bottom" id="5mu-qC-arw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KN0-4f-uBM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log in with VK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1P-ui-cqR">
+                                <rect key="frame" x="133" y="323" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpv-jl-dYc">
+                                <rect key="frame" x="154" y="360" width="66" height="30"/>
+                                <state key="normal" title="Authorize"/>
+                                <connections>
+                                    <action selector="authorize" destination="gBX-Kx-hs1" eventType="touchUpInside" id="FXN-hl-MvM"/>
+                                    <segue destination="NSE-4N-Cyl" kind="show" id="5th-4K-4qF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COa-cO-ySs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1850.5" y="-223.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jrk-oV-k91">
+            <objects>
+                <navigationController id="NSE-4N-Cyl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2AX-8y-5Ks">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sWf-W4-j5q" kind="relationship" relationship="rootViewController" id="beI-2v-PJe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wr0-32-avb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1223.5" y="-231.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="t13-TO-LB3">
@@ -322,17 +372,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9E-zJ-vgd">
-                                <rect key="frame" x="66" y="123" width="197" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Redirect to VK.com"/>
-                                <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="X8d-2D-AZi"/>
-                                </connections>
-                            </button>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMU-C9-hAw">
+                                <rect key="frame" x="20" y="64" width="335" height="541"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="iFt-m9-OZ5"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLL-jC-6Zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -637,7 +684,4 @@
         <image name="second" width="30" height="30"/>
         <image name="sendButton" width="270" height="50"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="KHG-GH-NIA"/>
-    </inferredMetricsTieBreakers>
 </document>
