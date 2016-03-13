@@ -59,5 +59,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: VK stuff here
     
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        print("*** Inside AppDelegate - VKSDK.processOpenURL")
+        return VKSdk.processOpenURL(url, fromApplication: sourceApplication)
+    }
+    
 }
 
