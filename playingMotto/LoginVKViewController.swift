@@ -9,13 +9,15 @@
 import UIKit
 import VKSdkFramework
 
-class LoginVKViewController: UIViewController, VKSdkDelegate {
+class LoginVKViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
+    
+    let vkInstance = VKSdk.initializeWithAppId("5278492")
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        VKSdk.initializeWithAppId("5278492").registerDelegate(self)
-        //TODO: We might need to do something with UIDeleTgate
-        
+        vkInstance.registerDelegate(self)
+        vkInstance.uiDelegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,17 +28,14 @@ class LoginVKViewController: UIViewController, VKSdkDelegate {
     @IBAction func authorize() {
         print("*** Clicked the authorize button")
         
-        let scope = ["friends"]
+        let scope = ["status"]
         
         if VKSdk.vkAppMayExists () {
             print("*** App may exist")
             VKSdk.authorize (scope)
         } else {
-            
             // Do modal view here.
-            
-            
-            VKSdk.authorize (scope, withOptions: .DisableSafariController)
+            VKSdk.authorize (scope)
             print("*** App does not exist")
         }
     }
@@ -47,7 +46,6 @@ class LoginVKViewController: UIViewController, VKSdkDelegate {
         print("*** VK Authorization finished")
         let accessToken = VKSdk.accessToken()
         let userId = accessToken.userId
-        
         print("\(userId)")
         
     }
@@ -58,6 +56,28 @@ class LoginVKViewController: UIViewController, VKSdkDelegate {
     func vkSdkUserAuthorizationFailed() {
         print("*** VK Authorization failed")
     }
+    
+    func vkSdkShouldPresentViewController(controller: UIViewController!){
+        print("*** VK In vkSdkShouldPresentViewController")
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+
+    func vkSdkNeedCaptchaEnter(captchaError: VKError!) {
+        print("*** VK In vkSdkNeedCaptchaEnter")
+    }
+//
+//    /**
+//     * Called when a controller presented by SDK will be dismissed
+//     */
+//    @available(iOS 2.0, *)
+//    optional public func vkSdkWillDismissViewController(controller: UIViewController!)
+//    
+//    /**
+//     * Called when a controller presented by SDK did dismiss
+//     */
+//    @available(iOS 2.0, *)
+//    optional public func vkSdkDidDismissViewController(controller: UIViewController!)
     
 
 }
