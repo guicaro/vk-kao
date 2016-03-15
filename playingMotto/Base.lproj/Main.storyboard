@@ -327,16 +327,8 @@
                                 <state key="normal" title="Authorize"/>
                                 <connections>
                                     <action selector="authorize" destination="gBX-Kx-hs1" eventType="touchUpInside" id="FXN-hl-MvM"/>
-                                    <segue destination="NSE-4N-Cyl" kind="show" id="5th-4K-4qF"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jcY-pS-qCx">
-                                <rect key="frame" x="67" y="71" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                                <connections>
-                                    <outlet property="delegate" destination="gBX-Kx-hs1" id="Ryd-7K-FZf"/>
-                                </connections>
-                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -344,54 +336,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COa-cO-ySs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1850.5" y="-223.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Jrk-oV-k91">
-            <objects>
-                <navigationController id="NSE-4N-Cyl" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2AX-8y-5Ks">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="sWf-W4-j5q" kind="relationship" relationship="rootViewController" id="beI-2v-PJe"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wr0-32-avb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1223.5" y="-231.5"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="t13-TO-LB3">
-            <objects>
-                <viewController id="sWf-W4-j5q" customClass="LoginViewController" customModule="playingMotto" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vux-gi-f7S"/>
-                        <viewControllerLayoutGuide type="bottom" id="beq-iE-SkP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7rI-9w-fsb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login using Vkontakte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF8-gm-dWi">
-                                <rect key="frame" x="50" y="20" width="228" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMU-C9-hAw">
-                                <rect key="frame" x="20" y="64" width="335" height="541"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="iFt-m9-OZ5"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jLL-jC-6Zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-602.5" y="-231.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

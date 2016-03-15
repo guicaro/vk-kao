@@ -8,8 +8,10 @@
 
 import UIKit
 import VKSdkFramework
+import Parse
+import ParseUI
 
-class LoginVKViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
+class LoginVKViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
     let vkInstance = VKSdk.initializeWithAppId("5278492")
 
@@ -18,6 +20,30 @@ class LoginVKViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
         super.viewDidLoad()
         vkInstance.registerDelegate(self)
         vkInstance.uiDelegate = self
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if (PFUser.currentUser() == nil) {
+            let loginViewController = PFLogInViewController()
+            loginViewController.delegate = self
+            loginViewController.emailAsUsername = true
+            
+            loginViewController.signUpController?.delegate = self
+            self.presentViewController(loginViewController, animated: false, completion: nil)
+        } else {
+            presentLoggedInAlert()
+        }
+    }
+    
+    func presentLoggedInAlert() {
+        let alertController = UIAlertController(title: "You're logged in", message: "Welcome to My Motto", preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,6 +92,20 @@ class LoginVKViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     func vkSdkNeedCaptchaEnter(captchaError: VKError!) {
         print("*** VK In vkSdkNeedCaptchaEnter")
     }
+    
+    // MARK: Parse LoginDelegate
+    
+    
+    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        presentLoggedInAlert()
+    }
+    
+    func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        presentLoggedInAlert()
+    }
+    
 //
 //    /**
 //     * Called when a controller presented by SDK will be dismissed
