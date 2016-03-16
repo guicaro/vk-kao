@@ -13,13 +13,15 @@
 		BB3B74EA1C8D2E2B0037BACB /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74E91C8D2E2B0037BACB /* VKSdkFramework.framework */; };
 		BB3B74EC1C8D2E2F0037BACB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74EB1C8D2E2F0037BACB /* Parse.framework */; };
 		BB3B74EE1C8D2E330037BACB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74ED1C8D2E330037BACB /* Bolts.framework */; };
+		BB78B3871C991C16008A9C74 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB89C6A81C991A6A00110AAB /* Pacifico.ttf */; };
+		BB78B3891C992421008A9C74 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78B3881C992421008A9C74 /* SignUpViewController.swift */; };
 		BB89C6A01C99001E00110AAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB13CC41C7828A10008D018 /* Main.storyboard */; };
 		BB89C6A11C99001E00110AAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB13CC91C7828A10008D018 /* LaunchScreen.storyboard */; };
+		BB89C6A31C9914D300110AAB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB89C6A21C9914D300110AAB /* LoginViewController.swift */; };
 		BBB13CBF1C7828A10008D018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CBE1C7828A10008D018 /* AppDelegate.swift */; };
 		BBB13CC11C7828A10008D018 /* NewMottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CC01C7828A10008D018 /* NewMottoViewController.swift */; };
 		BBB13CC31C7828A10008D018 /* DisplayMottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CC21C7828A10008D018 /* DisplayMottoViewController.swift */; };
 		BBB13CD61C7828A10008D018 /* playingMottoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CD51C7828A10008D018 /* playingMottoTests.swift */; };
-		BBDFB9A11C8FE00E0043F405 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9A01C8FE00E0043F405 /* LandingViewController.swift */; };
 		BBDFB9A71C8FEAB30043F405 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9A61C8FEAB30043F405 /* ProfileViewController.swift */; };
 		BBDFB9A91C8FEAFB0043F405 /* ConfirmFavoritesAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9A81C8FEAFB0043F405 /* ConfirmFavoritesAddedViewController.swift */; };
 		BBDFB9AB1C8FEC9A0043F405 /* ConfirmThanksSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9AA1C8FEC9A0043F405 /* ConfirmThanksSentViewController.swift */; };
@@ -47,6 +49,9 @@
 		BB3B74EB1C8D2E2F0037BACB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = "<group>"; };
 		BB3B74ED1C8D2E330037BACB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
 		BB3B74F01C8D307D0037BACB /* playingMotto-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "playingMotto-Bridging-Header.h"; sourceTree = "<group>"; };
+		BB78B3881C992421008A9C74 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BB89C6A21C9914D300110AAB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BB89C6A81C991A6A00110AAB /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
 		BBB13CBB1C7828A10008D018 /* playingMotto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playingMotto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB13CBE1C7828A10008D018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBB13CC01C7828A10008D018 /* NewMottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMottoViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +62,6 @@
 		BBB13CD11C7828A10008D018 /* playingMottoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = playingMottoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB13CD51C7828A10008D018 /* playingMottoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playingMottoTests.swift; sourceTree = "<group>"; };
 		BBB13CD71C7828A10008D018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBDFB9A01C8FE00E0043F405 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		BBDFB9A61C8FEAB30043F405 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BBDFB9A81C8FEAFB0043F405 /* ConfirmFavoritesAddedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmFavoritesAddedViewController.swift; sourceTree = "<group>"; };
 		BBDFB9AA1C8FEC9A0043F405 /* ConfirmThanksSentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmThanksSentViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 		BBB13CBD1C7828A10008D018 /* playingMotto */ = {
 			isa = PBXGroup;
 			children = (
+				BB89C6A81C991A6A00110AAB /* Pacifico.ttf */,
 				BBB13CC41C7828A10008D018 /* Main.storyboard */,
 				BBB13CC91C7828A10008D018 /* LaunchScreen.storyboard */,
 				BBB13CBE1C7828A10008D018 /* AppDelegate.swift */,
@@ -140,7 +145,6 @@
 				BBB13CC01C7828A10008D018 /* NewMottoViewController.swift */,
 				BBB13CC21C7828A10008D018 /* DisplayMottoViewController.swift */,
 				BB3B74E71C8D22330037BACB /* ConfirmMottoSentController.swift */,
-				BBDFB9A01C8FE00E0043F405 /* LandingViewController.swift */,
 				BBDFB9A61C8FEAB30043F405 /* ProfileViewController.swift */,
 				BBDFB9A81C8FEAFB0043F405 /* ConfirmFavoritesAddedViewController.swift */,
 				BBDFB9AA1C8FEC9A0043F405 /* ConfirmThanksSentViewController.swift */,
@@ -148,6 +152,8 @@
 				BBDFB9AE1C8FEDCC0043F405 /* MyMottosViewController.swift */,
 				BBDFB9B01C8FEE1A0043F405 /* EditProfileViewController.swift */,
 				BB1EC7401C929192002385EA /* LoginVKViewController.swift */,
+				BB89C6A21C9914D300110AAB /* LoginViewController.swift */,
+				BB78B3881C992421008A9C74 /* SignUpViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB78B3871C991C16008A9C74 /* Pacifico.ttf in Resources */,
 				BB89C6A01C99001E00110AAB /* Main.storyboard in Resources */,
 				BB89C6A11C99001E00110AAB /* LaunchScreen.storyboard in Resources */,
 				BB1E705B1C83E4F500BC9D1D /* Assets.xcassets in Resources */,
@@ -284,8 +291,9 @@
 				BBDFB9A91C8FEAFB0043F405 /* ConfirmFavoritesAddedViewController.swift in Sources */,
 				BBDFB9AB1C8FEC9A0043F405 /* ConfirmThanksSentViewController.swift in Sources */,
 				BBDFB9B11C8FEE1A0043F405 /* EditProfileViewController.swift in Sources */,
-				BBDFB9A11C8FE00E0043F405 /* LandingViewController.swift in Sources */,
 				BBB13CC11C7828A10008D018 /* NewMottoViewController.swift in Sources */,
+				BB89C6A31C9914D300110AAB /* LoginViewController.swift in Sources */,
+				BB78B3891C992421008A9C74 /* SignUpViewController.swift in Sources */,
 				BBDFB9AF1C8FEDCC0043F405 /* MyMottosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

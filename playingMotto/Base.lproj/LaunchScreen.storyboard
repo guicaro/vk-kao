@@ -20,13 +20,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodwhite" translatesAutoresizingMaskIntoConstraints="NO" id="q4T-OR-4Up">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-72" translatesAutoresizingMaskIntoConstraints="NO" id="Zxn-33-m2v">
-                                <rect key="frame" x="250" y="50" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="2C3-Ma-KA6"/>
-                                    <constraint firstAttribute="width" constant="100" id="906-RK-Ebu"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -36,9 +29,7 @@
                             <constraint firstItem="q4T-OR-4Up" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="RrB-Jy-r6w"/>
                             <constraint firstItem="q4T-OR-4Up" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="Vls-LF-Csx"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="q4T-OR-4Up" secondAttribute="bottom" id="Wn7-GS-4dr"/>
-                            <constraint firstItem="Zxn-33-m2v" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="30" id="b5g-oc-Fn6"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="q4T-OR-4Up" secondAttribute="bottom" id="bs7-k2-YYb"/>
-                            <constraint firstItem="Zxn-33-m2v" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wgL-fi-Soc"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -48,7 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-72" width="72" height="72"/>
         <image name="woodwhite" width="1360" height="929"/>
     </resources>
 </document>
