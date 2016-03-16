@@ -13,11 +13,11 @@
 		BB3B74EA1C8D2E2B0037BACB /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74E91C8D2E2B0037BACB /* VKSdkFramework.framework */; };
 		BB3B74EC1C8D2E2F0037BACB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74EB1C8D2E2F0037BACB /* Parse.framework */; };
 		BB3B74EE1C8D2E330037BACB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3B74ED1C8D2E330037BACB /* Bolts.framework */; };
+		BB89C6A01C99001E00110AAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB13CC41C7828A10008D018 /* Main.storyboard */; };
+		BB89C6A11C99001E00110AAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB13CC91C7828A10008D018 /* LaunchScreen.storyboard */; };
 		BBB13CBF1C7828A10008D018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CBE1C7828A10008D018 /* AppDelegate.swift */; };
 		BBB13CC11C7828A10008D018 /* NewMottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CC01C7828A10008D018 /* NewMottoViewController.swift */; };
 		BBB13CC31C7828A10008D018 /* DisplayMottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CC21C7828A10008D018 /* DisplayMottoViewController.swift */; };
-		BBB13CC61C7828A10008D018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB13CC41C7828A10008D018 /* Main.storyboard */; };
-		BBB13CCB1C7828A10008D018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB13CC91C7828A10008D018 /* LaunchScreen.storyboard */; };
 		BBB13CD61C7828A10008D018 /* playingMottoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB13CD51C7828A10008D018 /* playingMottoTests.swift */; };
 		BBDFB9A11C8FE00E0043F405 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9A01C8FE00E0043F405 /* LandingViewController.swift */; };
 		BBDFB9A71C8FEAB30043F405 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFB9A61C8FEAB30043F405 /* ProfileViewController.swift */; };
@@ -115,22 +115,12 @@
 		BBB13CBD1C7828A10008D018 /* playingMotto */ = {
 			isa = PBXGroup;
 			children = (
-				BBB13CBE1C7828A10008D018 /* AppDelegate.swift */,
-				BBB13CC01C7828A10008D018 /* NewMottoViewController.swift */,
-				BBB13CC21C7828A10008D018 /* DisplayMottoViewController.swift */,
 				BBB13CC41C7828A10008D018 /* Main.storyboard */,
 				BBB13CC91C7828A10008D018 /* LaunchScreen.storyboard */,
+				BBB13CBE1C7828A10008D018 /* AppDelegate.swift */,
+				BBEF80DB1C98F9FE009B9C6C /* ViewControllers */,
 				BBB13CCC1C7828A10008D018 /* Info.plist */,
-				BB3B74E71C8D22330037BACB /* ConfirmMottoSentController.swift */,
 				BB3B74F01C8D307D0037BACB /* playingMotto-Bridging-Header.h */,
-				BBDFB9A01C8FE00E0043F405 /* LandingViewController.swift */,
-				BBDFB9A61C8FEAB30043F405 /* ProfileViewController.swift */,
-				BBDFB9A81C8FEAFB0043F405 /* ConfirmFavoritesAddedViewController.swift */,
-				BBDFB9AA1C8FEC9A0043F405 /* ConfirmThanksSentViewController.swift */,
-				BBDFB9AC1C8FECE60043F405 /* NewThanksViewController.swift */,
-				BBDFB9AE1C8FEDCC0043F405 /* MyMottosViewController.swift */,
-				BBDFB9B01C8FEE1A0043F405 /* EditProfileViewController.swift */,
-				BB1EC7401C929192002385EA /* LoginVKViewController.swift */,
 			);
 			path = playingMotto;
 			sourceTree = "<group>";
@@ -142,6 +132,24 @@
 				BBB13CD71C7828A10008D018 /* Info.plist */,
 			);
 			path = playingMottoTests;
+			sourceTree = "<group>";
+		};
+		BBEF80DB1C98F9FE009B9C6C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBB13CC01C7828A10008D018 /* NewMottoViewController.swift */,
+				BBB13CC21C7828A10008D018 /* DisplayMottoViewController.swift */,
+				BB3B74E71C8D22330037BACB /* ConfirmMottoSentController.swift */,
+				BBDFB9A01C8FE00E0043F405 /* LandingViewController.swift */,
+				BBDFB9A61C8FEAB30043F405 /* ProfileViewController.swift */,
+				BBDFB9A81C8FEAFB0043F405 /* ConfirmFavoritesAddedViewController.swift */,
+				BBDFB9AA1C8FEC9A0043F405 /* ConfirmThanksSentViewController.swift */,
+				BBDFB9AC1C8FECE60043F405 /* NewThanksViewController.swift */,
+				BBDFB9AE1C8FEDCC0043F405 /* MyMottosViewController.swift */,
+				BBDFB9B01C8FEE1A0043F405 /* EditProfileViewController.swift */,
+				BB1EC7401C929192002385EA /* LoginVKViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,9 +235,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBB13CCB1C7828A10008D018 /* LaunchScreen.storyboard in Resources */,
+				BB89C6A01C99001E00110AAB /* Main.storyboard in Resources */,
+				BB89C6A11C99001E00110AAB /* LaunchScreen.storyboard in Resources */,
 				BB1E705B1C83E4F500BC9D1D /* Assets.xcassets in Resources */,
-				BBB13CC61C7828A10008D018 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

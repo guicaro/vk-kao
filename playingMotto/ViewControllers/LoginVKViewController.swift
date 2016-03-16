@@ -29,6 +29,7 @@ class LoginVKViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, P
             let loginViewController = PFLogInViewController()
             loginViewController.delegate = self
             loginViewController.emailAsUsername = true
+           // PFLogInFields.
             
             loginViewController.signUpController?.delegate = self
             self.presentViewController(loginViewController, animated: false, completion: nil)
