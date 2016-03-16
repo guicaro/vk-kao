@@ -264,37 +264,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Motto a day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSg-kM-IWt">
-                                <rect key="frame" x="113" y="91" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon-72" translatesAutoresizingMaskIntoConstraints="NO" id="0Xi-cK-gDn">
-                                <rect key="frame" x="83" y="120" width="151" height="151"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodwhite" translatesAutoresizingMaskIntoConstraints="NO" id="2f8-en-plF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share, learn and thank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TP3-NI-ruH">
-                                <rect key="frame" x="72" y="285" width="172" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-72" translatesAutoresizingMaskIntoConstraints="NO" id="WgG-u1-p2u">
+                                <rect key="frame" x="137.5" y="50" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="EUK-al-6YX"/>
+                                    <constraint firstAttribute="height" constant="100" id="WeZ-Kh-j7b"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTo-EQ-S8K">
+                                <rect key="frame" x="166" y="188" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qck-vU-cvF">
-                                <rect key="frame" x="96" y="377" width="124" height="30"/>
-                                <state key="normal" title="Next, log in (Auto)"/>
-                                <connections>
-                                    <segue destination="gBX-Kx-hs1" kind="show" id="aEm-bX-gta"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBd-bR-Isy">
-                                <rect key="frame" x="56" y="432" width="204" height="30"/>
-                                <state key="normal" title="Next, already logged in (Auto)"/>
-                                <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="KHG-GH-NIA"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2f8-en-plF" secondAttribute="trailing" id="1LD-15-5wf"/>
+                            <constraint firstItem="YTo-EQ-S8K" firstAttribute="top" secondItem="WgG-u1-p2u" secondAttribute="bottom" constant="38" id="8L2-xj-LMt"/>
+                            <constraint firstItem="2f8-en-plF" firstAttribute="leading" secondItem="eOt-5A-odc" secondAttribute="leading" id="BZp-4Y-xNd"/>
+                            <constraint firstItem="WgG-u1-p2u" firstAttribute="centerX" secondItem="eOt-5A-odc" secondAttribute="centerX" id="EsF-my-zyC"/>
+                            <constraint firstItem="2f8-en-plF" firstAttribute="top" secondItem="aJh-9L-Kdy" secondAttribute="bottom" id="SHg-N2-sAd"/>
+                            <constraint firstItem="WgG-u1-p2u" firstAttribute="top" secondItem="aJh-9L-Kdy" secondAttribute="bottom" constant="30" id="q8h-0r-MHF"/>
+                            <constraint firstItem="YTo-EQ-S8K" firstAttribute="centerX" secondItem="WgG-u1-p2u" secondAttribute="centerX" id="v0P-e8-haq"/>
+                            <constraint firstItem="aBJ-do-15d" firstAttribute="top" secondItem="2f8-en-plF" secondAttribute="bottom" id="vL5-GS-OKl"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -313,7 +310,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5mu-qC-arw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KN0-4f-uBM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log in with VK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1P-ui-cqR">
@@ -634,5 +631,6 @@
         <image name="memo" width="498" height="494"/>
         <image name="second" width="30" height="30"/>
         <image name="sendButton" width="270" height="50"/>
+        <image name="woodwhite" width="1360" height="929"/>
     </resources>
 </document>
