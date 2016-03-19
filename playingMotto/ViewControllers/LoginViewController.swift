@@ -38,9 +38,10 @@ class LoginViewController : PFLogInViewController {
         logInView?.dismissButton?.hidden = true
         
         // make the buttons classier
-        //customizeButton(logInView?.facebookButton!)
-        //customizeButton(logInView?.twitterButton!)
-        //customizeButton(logInView?.signUpButton!)
+        customizeButton(logInView?.facebookButton!)
+        customizeButton(logInView?.signUpButton!)
+        
+        //logInView?.facebookButton?.addTarget(<#T##target: AnyObject?##AnyObject?#>, action: <#T##Selector#>, forControlEvents: <#T##UIControlEvents#>)
         
         self.signUpController = SignUpViewController()
     }
@@ -56,17 +57,21 @@ class LoginViewController : PFLogInViewController {
         logInView!.logo!.frame = CGRectMake(logoFrame.origin.x, logInView!.usernameField!.frame.origin.y - logoFrame.height - 16, logInView!.frame.width,  logoFrame.height)
         
         logInView?.signUpButton?.setTitle("Register", forState: .Normal)
-        logInView?.passwordForgottenButton?.setTitleColor(UIColor.grayColor(), forState: .Normal)        
+        logInView?.facebookButton?.setTitle("Log In with VKontakte", forState: .Normal)
+        logInView?.facebookButton?.setImage(UIImage(named: "vkLogoRoundEdgeSMALL"), forState: .Normal)
         
+        logInView?.passwordForgottenButton?.setTitleColor(UIColor.grayColor(), forState: .Normal)
     }
     
     
     func customizeButton(button: UIButton!) {
         button.setBackgroundImage(nil, forState: .Normal)
+        button.setTitleColor(UIColor.blackColor(), forState: .Normal)
         button.backgroundColor = UIColor.clearColor()
+        
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.whiteColor().CGColor
+        button.layer.borderColor = UIColor.blackColor().CGColor
     }
     
 }

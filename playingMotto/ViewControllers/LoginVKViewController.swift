@@ -22,14 +22,14 @@ class LoginVKViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, P
         vkInstance.uiDelegate = self
     }
     
-    
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         if (PFUser.currentUser() == nil) {
             let loginViewController = LoginViewController()
             loginViewController.delegate = self
+            
+            loginViewController.fields = [.UsernameAndPassword, .PasswordForgotten, .LogInButton, .Facebook, .SignUpButton, .DismissButton]
             loginViewController.emailAsUsername = true
             loginViewController.signUpController?.emailAsUsername = true
             loginViewController.signUpController?.delegate = self
