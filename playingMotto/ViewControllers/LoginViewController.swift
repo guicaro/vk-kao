@@ -40,11 +40,18 @@ class LoginViewController : PFLogInViewController {
         // make the buttons classier
         customizeButton(logInView?.facebookButton!)
         customizeButton(logInView?.signUpButton!)
+
+        // Try adding the target here and the authorize button here
+                //Maybe there should be another view that is UIDELEGATE?
         
-        //logInView?.facebookButton?.addTarget(<#T##target: AnyObject?##AnyObject?#>, action: <#T##Selector#>, forControlEvents: <#T##UIControlEvents#>)
+        //TODO: Also move all the VK code here from LoginVKViewController
+        //TODO: Add Parse code to create session if logged in with VK
+        
         
         self.signUpController = SignUpViewController()
     }
+    
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -59,8 +66,26 @@ class LoginViewController : PFLogInViewController {
         logInView?.signUpButton?.setTitle("Register", forState: .Normal)
         logInView?.facebookButton?.setTitle("Log In with VKontakte", forState: .Normal)
         logInView?.facebookButton?.setImage(UIImage(named: "vkLogoRoundEdgeSMALL"), forState: .Normal)
+        logInView?.facebookButton?.removeTarget(nil, action: nil, forControlEvents: .AllEvents)
+        logInView?.facebookButton?.addTarget(self, action: "authorizeVK:", forControlEvents: UIControlEvents.TouchUpInside)
         
         logInView?.passwordForgottenButton?.setTitleColor(UIColor.grayColor(), forState: .Normal)
+    }
+    
+    
+    func authorizeVK(sender: UIButton!) {
+        print("*** Clicked the authorize button")
+        
+        let scope = ["status"]
+        
+        if VKSdk.vkAppMayExists () {
+            print("*** App may exist")
+            VKSdk.authorize (scope)
+        } else {
+            // Do modal view here.
+            VKSdk.authorize (scope)
+            print("*** App does not exist")
+        }
     }
     
     
