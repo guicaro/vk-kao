@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1997B81C9F5B92006C8D5F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1997B71C9F5B92006C8D5F /* Utilities.swift */; };
 		BB1E705B1C83E4F500BC9D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1E705A1C83E4F500BC9D1D /* Assets.xcassets */; };
 		BB1EC7411C929192002385EA /* LoginVKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EC7401C929192002385EA /* LoginVKViewController.swift */; };
 		BB3B74E81C8D22330037BACB /* ConfirmMottoSentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B74E71C8D22330037BACB /* ConfirmMottoSentController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB1997B71C9F5B92006C8D5F /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BB1E705A1C83E4F500BC9D1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = playingMotto/Assets.xcassets; sourceTree = "<group>"; };
 		BB1EC7401C929192002385EA /* LoginVKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVKViewController.swift; sourceTree = "<group>"; };
 		BB3B74E71C8D22330037BACB /* ConfirmMottoSentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmMottoSentController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB1997B61C9F5B58006C8D5F /* util */ = {
+			isa = PBXGroup;
+			children = (
+				BB1997B71C9F5B92006C8D5F /* Utilities.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		BBB13CB21C7828A10008D018 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 		BBB13CBD1C7828A10008D018 /* playingMotto */ = {
 			isa = PBXGroup;
 			children = (
+				BB1997B61C9F5B58006C8D5F /* util */,
 				BB89C6A81C991A6A00110AAB /* Pacifico.ttf */,
 				BBB13CC41C7828A10008D018 /* Main.storyboard */,
 				BBB13CC91C7828A10008D018 /* LaunchScreen.storyboard */,
@@ -284,6 +295,7 @@
 			files = (
 				BBDFB9AD1C8FECE60043F405 /* NewThanksViewController.swift in Sources */,
 				BB1EC7411C929192002385EA /* LoginVKViewController.swift in Sources */,
+				BB1997B81C9F5B92006C8D5F /* Utilities.swift in Sources */,
 				BB3B74E81C8D22330037BACB /* ConfirmMottoSentController.swift in Sources */,
 				BBB13CC31C7828A10008D018 /* DisplayMottoViewController.swift in Sources */,
 				BBB13CBF1C7828A10008D018 /* AppDelegate.swift in Sources */,

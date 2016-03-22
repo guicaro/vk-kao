@@ -59,8 +59,6 @@ class SignUpViewController : PFSignUpViewController {
         signUpView?.dismissButton!.frame = CGRectMake(0, signUpView!.signUpButton!.frame.origin.y + signUpView!.signUpButton!.frame.height + 16.0,  signUpView!.frame.width,  dismissButtonFrame.height)
         
         signUpView?.dismissButton?.setTitleColor(UIColor.grayColor(), forState: .Normal)
-
-        
     }
     
 }

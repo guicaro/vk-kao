@@ -11,15 +11,11 @@ import VKSdkFramework
 import Parse
 import ParseUI
 
-class LoginVKViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
-    
-    let vkInstance = VKSdk.initializeWithAppId("5278492")
+class LoginVKViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        vkInstance.registerDelegate(self)
-        vkInstance.uiDelegate = self
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -32,8 +28,6 @@ class LoginVKViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, P
             loginViewController.fields = [.UsernameAndPassword, .PasswordForgotten, .LogInButton, .Facebook, .SignUpButton, .DismissButton]
             loginViewController.emailAsUsername = true
             loginViewController.signUpController?.emailAsUsername = true
-            loginViewController.signUpController?.delegate = self
-            
             loginViewController.signUpController?.delegate = self
             self.presentViewController(loginViewController, animated: false, completion: nil)
         } else {
@@ -53,48 +47,6 @@ class LoginVKViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate, P
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func authorize() {
-        print("*** Clicked the authorize button")
-        
-        let scope = ["status"]
-        
-        if VKSdk.vkAppMayExists () {
-            print("*** App may exist")
-            VKSdk.authorize (scope)
-        } else {
-            // Do modal view here.
-            VKSdk.authorize (scope)
-            print("*** App does not exist")
-        }
-    }
-
-    // MARK: VK Delegate methods
-    
-    func vkSdkAccessAuthorizationFinishedWithResult(result: VKAuthorizationResult!) {
-        print("*** VK Authorization finished")
-        let accessToken = VKSdk.accessToken()
-        let userId = accessToken.userId
-        print("\(userId)")
-        
-    }
-    
-    /**
-     Notifies delegate about access error, mostly connected with user deauthorized application
-     */
-    func vkSdkUserAuthorizationFailed() {
-        print("*** VK Authorization failed")
-    }
-    
-    func vkSdkShouldPresentViewController(controller: UIViewController!){
-        print("*** VK In vkSdkShouldPresentViewController")
-        self.presentViewController(controller, animated: true, completion: nil)
-    }
-    
-
-    func vkSdkNeedCaptchaEnter(captchaError: VKError!) {
-        print("*** VK In vkSdkNeedCaptchaEnter")
     }
     
     // MARK: Parse LoginDelegate

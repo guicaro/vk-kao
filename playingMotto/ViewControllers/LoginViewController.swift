@@ -6,16 +6,21 @@
 //  Copyright © 2016 Guillermo Cabrera. All rights reserved.
 //
 
+import Parse
 import ParseUI
 import UIKit
 import VKSdkFramework
 
-class LoginViewController : PFLogInViewController {
+class LoginViewController :  PFLogInViewController, VKSdkDelegate, VKSdkUIDelegate {
     
     var backgroundImage : UIImageView!;
+    let vkInstance = VKSdk.initializeWithAppId("5278492")
+    let passwordLen = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        vkInstance.registerDelegate(self)
+        vkInstance.uiDelegate = self
         
         // set our custom background image
         backgroundImage = UIImageView(image: UIImage(named: "woodwhite"))
@@ -40,18 +45,9 @@ class LoginViewController : PFLogInViewController {
         // make the buttons classier
         customizeButton(logInView?.facebookButton!)
         customizeButton(logInView?.signUpButton!)
-
-        // Try adding the target here and the authorize button here
-                //Maybe there should be another view that is UIDELEGATE?
-        
-        //TODO: Also move all the VK code here from LoginVKViewController
-        //TODO: Add Parse code to create session if logged in with VK
-        
         
         self.signUpController = SignUpViewController()
     }
-    
-    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -76,7 +72,8 @@ class LoginViewController : PFLogInViewController {
     func authorizeVK(sender: UIButton!) {
         print("*** Clicked the authorize button")
         
-        let scope = ["status"]
+        
+        let scope = ["status,email"]
         
         if VKSdk.vkAppMayExists () {
             print("*** App may exist")
@@ -88,7 +85,6 @@ class LoginViewController : PFLogInViewController {
         }
     }
     
-    
     func customizeButton(button: UIButton!) {
         button.setBackgroundImage(nil, forState: .Normal)
         button.setTitleColor(UIColor.blackColor(), forState: .Normal)
@@ -98,5 +94,93 @@ class LoginViewController : PFLogInViewController {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.blackColor().CGColor
     }
+    
+    // MARK: VK Delegate methods
+    
+    func vkSdkAccessAuthorizationFinishedWithResult(result: VKAuthorizationResult!) {
+        print("*** VK Authorization finished")
+        
+        let accessToken = VKSdk.accessToken()
+        let vkAccessTokenString = accessToken.accessToken
+        let vkUserId = accessToken.userId
+        let vkEmail = accessToken.email
+        print("\(vkUserId)")
+        print("\(vkEmail)")
+        
+        // Create PFUser and sign him/her up
+        let mottoUser = PFUser()
+        mottoUser.username = vkUserId
+        // TODO: If no email from VK, maybe register their userid@vkmotto.com
+        mottoUser.email = vkEmail
+        mottoUser.password = Utilities.randomAlphaNumericString(passwordLen)
+        mottoUser["accessToken"] = vkAccessTokenString
+        
+        // Query Parse for user
+        let query = PFUser.query()
+        query!.whereKey("email", equalTo:vkEmail)
+        query!.limit = 1
+        var scoutVKUser: [PFObject]? = nil
+        
+        do {
+            scoutVKUser = try query?.findObjects()
+        } catch {
+            print("Some error occured with query")
+        }
+        
+        // If no user in our ParseServer, then go ahead and sign him/her up
+        if scoutVKUser?.count == 0 {
+            
+            mottoUser.signUpInBackgroundWithBlock({
+                (succeeded: Bool, error: NSError?) -> Void in
+                if let error = error {
+                    let errorString = error.userInfo["error"] as? NSString
+                    print("\(errorString)")
+                } else {
+                    print("Hooray! Let them use the app now.")
+                    self.signUpController?.delegate?.signUpViewController!(self.signUpController!, didSignUpUser: mottoUser)
+                }
+            })
+        } else {
+            
+            print ("User exists - Unimplemented feature")
+            // TODO
+            // User already logged in with VK, thus there is a parseSessionToken stored in mongoDB.
+            // Thus, let's retrieve this token and log in user.
+//            let scoutVKUsername = scoutVKUser?.first?.objectForKey("username") as! String
+//            let scoutVKUSerpass = scoutVKUser?.first?.objectForKey("password") as! String
+//            
+//            // Now log this user in
+//            PFUser.logInWithUsernameInBackground(scoutVKUsername, password:scoutVKUSerpass) {
+//                (user: PFUser?, error: NSError?) -> Void in
+//                if user != nil {
+//                    print("Hooray! Let them use the app now.")
+//                } else {
+//                    print("Log in failed, do something")
+//                }
+//            }
+        }
+        
+        // Then check for session in each view controller
+        // Fix start screen, landing screen, so that after login you arrive at start screen
+        // Do logout. Let's be done by 5 PM.
+    }
+    
+    /**
+     Notifies delegate about access error, mostly connected with user deauthorized application
+     */
+    func vkSdkUserAuthorizationFailed() {
+        print("*** VK Authorization failed")
+    }
+    
+    func vkSdkShouldPresentViewController(controller: UIViewController!){
+        print("*** VK In vkSdkShouldPresentViewController")
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    
+    func vkSdkNeedCaptchaEnter(captchaError: VKError!) {
+        print("*** VK In vkSdkNeedCaptchaEnter")
+    }
+
     
 }
