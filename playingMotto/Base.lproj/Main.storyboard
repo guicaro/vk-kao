@@ -266,11 +266,11 @@
                         <viewControllerLayoutGuide type="bottom" id="5mu-qC-arw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KN0-4f-uBM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpv-jl-dYc">
-                                <rect key="frame" x="154" y="478" width="66" height="30"/>
+                                <rect key="frame" x="204" y="357" width="66" height="30"/>
                                 <fontDescription key="fontDescription" name="Pacifico" family="Pacifico" pointSize="15"/>
                                 <state key="normal" title="Authorize"/>
                                 <connections>
@@ -280,10 +280,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COa-cO-ySs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1850.5" y="-223.5"/>
+            <point key="canvasLocation" x="-1815.5" y="757.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="KUc-gn-XU6">
@@ -301,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFv-8h-dgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1301" y="-1011"/>
+            <point key="canvasLocation" x="-1301" y="-175"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
