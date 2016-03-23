@@ -39,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="woodwhite" width="1360" height="929"/>
+        <image name="woodwhite" width="320" height="480"/>
     </resources>
 </document>

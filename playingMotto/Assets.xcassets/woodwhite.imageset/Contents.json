@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "woodwhite.jpg",
+      "filename" : "portrait.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "portrait@2x.png",
       "scale" : "2x"
     },
     {
