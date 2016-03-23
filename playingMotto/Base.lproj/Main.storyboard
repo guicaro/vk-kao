@@ -90,6 +90,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woodwhite" translatesAutoresizingMaskIntoConstraints="NO" id="GRg-2c-u6E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Respect people around you and be grateful to them, especially to ones that make you feel irritated." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MiM-BO-JCA">
                                 <rect key="frame" x="45" y="136" width="240" height="259"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
