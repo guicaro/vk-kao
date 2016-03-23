@@ -6,9 +6,19 @@
 //  Copyright © 2016 Guillermo Cabrera. All rights reserved.
 //
 
+import VKSdkFramework
+import Parse
 import UIKit
 
 class MyMottosViewController: UIViewController {
+    
+    @IBAction func logout(sender: UIButton) {
+        VKSdk.forceLogout()
+        PFUser.logOut()
+        
+        // Create a segue
+        self.performSegueWithIdentifier("backToLogin", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -100,7 +100,9 @@ class LoginViewController :  PFLogInViewController, VKSdkDelegate, VKSdkUIDelega
     func vkSdkAccessAuthorizationFinishedWithResult(result: VKAuthorizationResult!) {
         print("*** VK Authorization finished")
         
+        // Safeguard when user clicks DONE on modal view presented by VK
         let accessToken = VKSdk.accessToken()
+        if (accessToken != nil) {
         let vkAccessTokenString = accessToken.accessToken
         let vkUserId = accessToken.userId
         let vkEmail = accessToken.email
@@ -112,7 +114,7 @@ class LoginViewController :  PFLogInViewController, VKSdkDelegate, VKSdkUIDelega
         mottoUser.username = vkUserId
         // TODO: If no email from VK, maybe register their userid@vkmotto.com
         mottoUser.email = vkEmail
-        mottoUser.password = Utilities.randomAlphaNumericString(passwordLen)
+        mottoUser.password = Utilities.reverseString(vkUserId)
         mottoUser["accessToken"] = vkAccessTokenString
         
         // Query Parse for user
@@ -142,27 +144,22 @@ class LoginViewController :  PFLogInViewController, VKSdkDelegate, VKSdkUIDelega
             })
         } else {
             
-            print ("User exists - Unimplemented feature")
-            // TODO
-            // User already logged in with VK, thus there is a parseSessionToken stored in mongoDB.
-            // Thus, let's retrieve this token and log in user.
-//            let scoutVKUsername = scoutVKUser?.first?.objectForKey("username") as! String
-//            let scoutVKUSerpass = scoutVKUser?.first?.objectForKey("password") as! String
-//            
-//            // Now log this user in
-//            PFUser.logInWithUsernameInBackground(scoutVKUsername, password:scoutVKUSerpass) {
-//                (user: PFUser?, error: NSError?) -> Void in
-//                if user != nil {
-//                    print("Hooray! Let them use the app now.")
-//                } else {
-//                    print("Log in failed, do something")
-//                }
-//            }
+            // User already tried to log in using VK API, so we signed him in, thus, now let's just pick up the session
+            // or log him/her in. Notice we know the password as we know the secret function when we sign him up in the
+            // background.
+            
+            PFUser.logInWithUsernameInBackground(mottoUser.username!, password:mottoUser.password!) {
+                (user: PFUser?, error: NSError?) -> Void in
+                if user != nil {
+                    print("Great, we can log in")
+                    self.delegate?.logInViewController!(self, didLogInUser: mottoUser)
+
+                } else {
+                    print("Error while trying to log in an existing user.")
+                }
+            }
         }
-        
-        // Then check for session in each view controller
-        // Fix start screen, landing screen, so that after login you arrive at start screen
-        // Do logout. Let's be done by 5 PM.
+        }
     }
     
     /**
@@ -176,7 +173,6 @@ class LoginViewController :  PFLogInViewController, VKSdkDelegate, VKSdkUIDelega
         print("*** VK In vkSdkShouldPresentViewController")
         self.presentViewController(controller, animated: true, completion: nil)
     }
-    
     
     func vkSdkNeedCaptchaEnter(captchaError: VKError!) {
         print("*** VK In vkSdkNeedCaptchaEnter")

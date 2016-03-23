@@ -25,4 +25,8 @@ class Utilities {
         return randomString
     }
     
+    static func reverseString(term: String) -> String {
+        return String(term.characters.reverse())
+    }
+    
 }
